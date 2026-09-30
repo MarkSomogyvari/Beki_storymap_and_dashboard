@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   let map = null;
   let markers = {};
   let riverPathLayer = null;
-  let floodOverlaysLayer = null;
   let politicalMapLayer = null;
+  let simulationLayers = {};
+  let currentDischarge = 1000;
+  const simulationBounds = [[26.257796, 90.783724], [26.795948, 91.051700]];
   let currentActiveId = null;
 
   // Basemap Tile Layers (Open data tiles)
@@ -67,24 +69,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
 
-    // Add Flood Overlays GeoJSON
-    floodOverlaysLayer = L.geoJSON(floodGeojson, {
-      style: (feature) => ({
-        color: feature.properties.fillColor || '#e63946',
-        fillColor: feature.properties.fillColor || '#e63946',
-        fillOpacity: 0.35,
-        weight: 2
-      }),
-      onEachFeature: (feature, layer) => {
-        layer.bindPopup(`
-          <div style="color: #0f172a; font-family: sans-serif;">
-            <h4 style="margin:0 0 4px 0; color: #0f4c81;">Year ${feature.properties.year} Flood Extent</h4>
-            <p style="margin:0; font-size:12px;"><strong>Event:</strong> ${feature.properties.event}</p>
-            <p style="margin:0; font-size:12px;"><strong>Severity:</strong> ${feature.properties.severity}</p>
-          </div>
-        `);
-      }
+    // Initialize 10 Flood Hazard Simulation Layers (1000 to 10000 m3/s)
+    const discharges = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
+    discharges.forEach(d => {
+      simulationLayers[d] = L.imageOverlay(`assets/simulations/sim_${d}.png`, simulationBounds, {
+        opacity: 0.85,
+        interactive: false
+      });
     });
+
+    // Add default simulation layer (1000 cumecs) to map
+    simulationLayers[currentDischarge];
 
     // Initialize Political Map GeoTIFF Layer Overlay (Off by default)
     const politicalMapBounds = [[25.942706, 89.866644], [28.889546, 92.661001]];
@@ -278,14 +273,20 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
 
-    const floodToggle = document.getElementById('chk-flood-overlays');
-    floodToggle.addEventListener('change', (e) => {
-      if (e.target.checked) {
-        floodOverlaysLayer.addTo(map);
-      } else {
-        map.removeLayer(floodOverlaysLayer);
-      }
-    });
+    // Flood Simulation Checkbox
+    const simulationToggle = document.getElementById('chk-flood-simulations');
+    if (simulationToggle) {
+      simulationToggle.addEventListener('change', (e) => {
+        const activeLayer = simulationLayers[currentDischarge];
+        if (activeLayer) {
+          if (e.target.checked) {
+            activeLayer.addTo(map);
+          } else {
+            map.removeLayer(activeLayer);
+          }
+        }
+      });
+    }
 
     const politicalToggle = document.getElementById('chk-political-map');
     if (politicalToggle) {
@@ -298,38 +299,31 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     }
 
-    // Timeline Slider
-    const timelineSlider = document.getElementById('timeline-slider');
-    const timelineYearDisplay = document.getElementById('timeline-year-display');
+    // Discharge Slider
+    const dischargeSlider = document.getElementById('discharge-slider');
+    const dischargeValDisplay = document.getElementById('discharge-val-display');
 
-    timelineSlider.addEventListener('input', (e) => {
-      const selectedYear = e.target.value;
-      timelineYearDisplay.textContent = selectedYear === '0' ? 'All Years' : selectedYear;
-
-      if (floodOverlaysLayer) {
-        map.removeLayer(floodOverlaysLayer);
-
-        const filteredFeatures = selectedYear === '0'
-          ? floodGeojson.features
-          : floodGeojson.features.filter(f => f.properties.year.toString() === selectedYear);
-
-        floodOverlaysLayer = L.geoJSON({ type: 'FeatureCollection', features: filteredFeatures }, {
-          style: (feature) => ({
-            color: feature.properties.fillColor || '#e63946',
-            fillColor: feature.properties.fillColor || '#e63946',
-            fillOpacity: 0.4,
-            weight: 2
-          }),
-          onEachFeature: (feature, layer) => {
-            layer.bindPopup(`
-              <div style="color: #0f172a; font-family: sans-serif;">
-                <h4 style="margin:0 0 4px 0; color: #0f4c81;">Year ${feature.properties.year} Flood Extent</h4>
-                <p style="margin:0; font-size:12px;"><strong>Event:</strong> ${feature.properties.event}</p>
-              </div>
-            `);
+    if (dischargeSlider) {
+      dischargeSlider.addEventListener('input', (e) => {
+        const newDischarge = parseInt(e.target.value);
+        if (newDischarge !== currentDischarge) {
+          // Remove old simulation layer
+          if (simulationLayers[currentDischarge] && map.hasLayer(simulationLayers[currentDischarge])) {
+            map.removeLayer(simulationLayers[currentDischarge]);
           }
-        }).addTo(map);
-      }
-    });
+
+          currentDischarge = newDischarge;
+
+          if (dischargeValDisplay) {
+            dischargeValDisplay.textContent = `${newDischarge.toLocaleString()} m³/s`;
+          }
+
+          // Add new simulation layer if checkbox is checked
+          if (simulationToggle && simulationToggle.checked && simulationLayers[currentDischarge]) {
+            simulationLayers[currentDischarge].addTo(map);
+          }
+        }
+      });
+    }
   }
 });

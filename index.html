@@ -88,12 +88,12 @@
           <div class="layer-group">
             <label class="group-title">Map Layers</label>
             <label class="layer-checkbox">
-              <input type="checkbox" id="chk-river-path" unchecked>
+              <input type="checkbox" id="chk-river-path">
               <span>Storyline</span>
             </label>
             <label class="layer-checkbox">
-              <input type="checkbox" id="chk-flood-overlays" unchecked>
-              <span>Historical Flood Inundation</span>
+              <input type="checkbox" id="chk-flood-simulations" unchecked>
+              <span>Flood Hazard Simulation</span>
             </label>
             <label class="layer-checkbox">
               <input type="checkbox" id="chk-political-map">
@@ -101,50 +101,47 @@
             </label>
           </div>
 
-          <!-- Timeline Slider for Flood Extents -->
+          <!-- Discharge Slider for Flood Hazard Simulations -->
           <div class="layer-group">
-            <label class="group-title">Historical Timeline</label>
+            <label class="group-title">Simulated Discharge (cumecs)</label>
             <div class="timeline-control-wrapper">
               <div class="timeline-header">
-                <span>Flood Extent Year:</span>
-                <span id="timeline-year-display">All Years</span>
+                <span>Discharge Rate:</span>
+                <span id="discharge-val-display" style="font-weight:700; color:var(--primary-accent);">1,000 m³/s</span>
               </div>
-              <input type="range" id="timeline-slider" class="timeline-slider" min="0" max="2023" step="1" value="0" list="timeline-years">
-              <datalist id="timeline-years">
-                <option value="0" label="All"></option>
-                <option value="2004" label="2004"></option>
-                <option value="2007" label="2007"></option>
-                <option value="2014" label="2014"></option>
-                <option value="2023" label="2023"></option>
-              </datalist>
-              <div class="timeline-ticks">
-                <span>All</span>
-                <span>2004</span>
-                <span>2007</span>
-                <span>2014</span>
-                <span>2023</span>
+              <input type="range" id="discharge-slider" class="timeline-slider" min="1000" max="10000" step="1000" value="1000">
+              <div class="timeline-ticks" style="font-size: 0.65rem;">
+                <span>1k</span>
+                <span>3k</span>
+                <span>5k</span>
+                <span>7k</span>
+                <span>10k</span>
               </div>
             </div>
           </div>
 
-          <!-- Map Legend -->
+          <!-- Hazard Rate Color Legend -->
           <div class="map-legend">
-            <label class="group-title" style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:0.4rem;">Legend</label>
+            <label class="group-title" style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:0.5rem;">Flood Hazard Rate</label>
             <div class="legend-item">
-              <div class="legend-color" style="background: #e63946;"></div>
-              <span>2004 Landslide Outburst Flood</span>
+              <div class="legend-color" style="background: #00ff00;"></div>
+              <span>Very Low</span>
             </div>
             <div class="legend-item">
-              <div class="legend-color" style="background: #f4a261;"></div>
-              <span>2007 Channel Migration Shift</span>
+              <div class="legend-color" style="background: #000080;"></div>
+              <span>Low</span>
             </div>
             <div class="legend-item">
-              <div class="legend-color" style="background: #2a9d8f;"></div>
-              <span>2014 Monsoon Flood</span>
+              <div class="legend-color" style="background: #ffff00;"></div>
+              <span>Moderate</span>
             </div>
             <div class="legend-item">
-              <div class="legend-color" style="background: #457b9d;"></div>
-              <span>2023 Chapori Bank Erosion</span>
+              <div class="legend-color" style="background: #ff8000;"></div>
+              <span>High</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #ff0000;"></div>
+              <span>Very High</span>
             </div>
           </div>
         </aside>
