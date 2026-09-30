@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kurichhu to Manas-Beki Main Flow Path",
+        "category": "Transboundary River Flow"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [91.16, 27.51],
+          [91.205, 27.216111],
+          [90.957778, 26.7825],
+          [90.91, 26.63],
+          [90.97, 26.58],
+          [90.98, 26.58],
+          [90.98, 26.63],
+          [90.934, 26.495],
+          [91.0103, 26.3291],
+          [90.89, 26.35]
+        ]
+      }
+    }
+  ]
+}

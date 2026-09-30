@@ -1,0 +1,118 @@
+# Story MapFollowing the River: From Kurichhu to the Manas–Beki
+
+Beki River Catchment Field StoryMap & Hydrological Dashboard
+
+---
+
+## 1. Tsatichhu
+*When the mountain became a dam*
+
+**Coordinates**: 27° 30' N (27.51° N), 91° 10' E (91.16° E) (`lat: 27.51`, `lon: 91.16`)
+
+**Media Image**: `assets/images/poi_1.jpg`
+
+This is where the story begins. The event that would later become a reference point for almost every downstream conversation occurred not because the Kurichhu Hydropower Dam itself failed, but because of a landslide upstream. Extreme rainfall triggered a large landslide that blocked the Tsatichhu, creating a temporary natural dam and an impounded lake upstream of the Kurichhu Hydropower project. For a while, the mountain itself became a barrier across the river. Water continued to accumulate behind it, increasing the pressure on the unstable landslide mass. The field reports describe this temporary lake as being approximately 30 kilometres upstream of the hydropower project. What happened next was not a normal seasonal flood. When the landslide dam failed, the stored water was suddenly released into the Kurichhu system. This distinction matters because the 2004 event is sometimes remembered simply as a “dam flood”, whereas the physical sequence described in the field reports was more complicated: extreme rainfall, landslide, temporary blockage, accumulation of water and eventual failure.
+
+---
+
+## 2. Kurichhu Hydropower Project, Bhutan
+*Where the story begins*
+
+**Coordinates**: 27° 12′ 58″ N, 91° 12′ 18″ E (`lat: 27.216111`, `lon: 91.205`)
+
+**Media Image**: `assets/images/poi_2.jpg`
+
+The journey begins upstream, at the Kurichhu Hydropower Project in Gyalpozhing, Mongar, Bhutan, where the river is still confined by the steep mountain terrain. The Kurichhu is part of the same transboundary river system that becomes the Manas–Beki after entering Assam. The hydropower project is a run-of-the-river facility, and its operation is closely tied to the changing water levels of the river and seasonal conditions. The field discussions here were important because downstream communities in Assam often understand changes in the river through what they experience several hours later, while the people operating the project see the river through rainfall, reservoir levels, turbine requirements and dam safety. These are two very different views of the same river. The fieldwork therefore did not treat the hydropower project as the single explanation for downstream flooding. Instead, it brought out a larger issue: in a transboundary river, information about rainfall, river levels and water releases has to travel across institutions and borders before it reaches the people living beside the river.
+
+---
+
+## 3. Mathanguri
+*Where the river crosses a border*
+
+**Coordinates**: 26° 46' 57" N, 90° 57' 28" E (`lat: 26.7825`, `lon: 90.957778`)
+
+**Media Image**: `assets/images/poi_3.jpg`
+
+At Mathanguri, the river enters India from Bhutan and the name and meaning of the river begin to change with the landscape around it. What is called the Kurichhu upstream becomes part of the Manas–Beki system downstream. The river moves through a different physical setting: from the confined mountain valley into the foothills and eventually towards the broad alluvial plains. This is where the transboundary nature of the river becomes particularly visible.
+
+When the temporary landslide dam burst in 2004, a very large volume of water entered the Kurichhu. The hydropower authorities had to respond to the rapidly changing conditions, and the resulting flood travelled downstream into Assam. For communities along the Manas–Beki, however, 2004 was remembered for more than the immediate inundation. The flood carried a large quantity of sediment and debris into the downstream system and poured it over Mathanguri confluence, from where Beki and Hakuwa rivers bifurcate. Houses and agricultural land were lost, families moved to higher ground, and people who had previously understood the river through a relatively familiar seasonal pattern found themselves dealing with a different river. The field reports record 2007, 2014 and 2023 as other years of severe flooding which changed the morphology and functionality of the entire Beki basin.
+
+---
+
+## 4. Hakuwa
+*The river that stopped being the main river*
+
+**Coordinates**: 26.63° N, 90.91° E (`lat: 26.63`, `lon: 90.91`)
+
+**Media Image**: `assets/images/poi_4.jpg`
+
+Further downstream, the most striking evidence of change is not always found in a flooded village. Sometimes it is found in a river that is no longer carrying the water it once did. Before 2004, local accounts describe Hakuwa as carrying much of the lean-season flow, while the Beki remained comparatively dry except during the monsoon. After the 2004 flood, this relationship changed. Large quantities of water, sediment and debris altered the channel system, and the main flow gradually shifted towards the Beki. Hakuwa, once an important channel, became what local people call “mora suti”, or a dead river. What remains today is largely a much smaller stream compared with its former condition. The change also created different experiences for different communities. Some areas that had previously lived with Hakuwa erosion found newly deposited land that could be cultivated. Communities along the Beki, however, began to experience stronger flow, erosion and flooding. The river had not simply become bigger; its internal distribution of water had changed.
+
+---
+
+## 5. Raghobill
+*Where the river meets the forest*
+
+**Coordinates**: 26.58° N, 90.97° E (`lat: 26.58`, `lon: 90.97`)
+
+**Media Image**: `assets/images/poi_5.jpg`
+
+At Raghobill, located in the Gobordhana region of Baksa, the river flows aside the landscape of Manas National Park. The Beki flows close to the Bansbari range, and embankments that have been constructed along sections of its bank . Here the purpose of flood protection becomes more complicated because the river is not only a threat to settlements and agricultural land. Seasonal flooding is also part of the ecological functioning of the grassland landscape. The field discussions with forest officials brought out another side of the problem: changes in rainfall, temperature and flooding are affecting the condition of the grasslands, while the embankments alter the frequency with which floodwater reaches adjoining areas. Reducing water in one location may provide greater security for people while also changing the environmental conditions that have historically shaped the grassland.
+
+---
+
+## 6. Gobardhana
+*The line between protection and failure*
+
+**Coordinates**: 26.58° N, 90.98° E (`lat: 26.58`, `lon: 90.98`)
+
+**Media Image**: `assets/images/poi_6.jpg`
+
+At Gobardhana, the river is encountered through infrastructure. After the 2004 flood, permanent embankments were constructed along important sections of the Beki, including areas intended to protect settlements and the national park. Residents reported that these structures have reduced the frequency and intensity of flooding in the protected areas. But the embankment itself has become part of everyday life. It is not only a flood-control structure; in places it also functions as a road and a communication route. During the field visit, a breached section was observed, with geobags absent at the location. Residents described previous seepage and breaches and expressed concern about high floods carrying debris against the embankment. Even small weaknesses can become serious when water remains high for long periods. The embankment therefore provides a degree of protection, but it also creates dependence on its continued integrity. When it works, the river remains outside the settlement. When it fails, water can enter suddenly and with little time for people to respond.
+
+---
+
+## 7. Elengamari Chapori
+*Living on land made by the river*
+
+**Coordinates**: 26.63° N, 90.98° E (`lat: 26.63`, `lon: 90.98`)
+
+**Media Image**: `assets/images/poi_7.jpg`
+
+Beyond the embankments lies another kind of landscape—the floodplain sediments, or commonly called as chars or chapori. Elengamari is not a piece of land that can be treated as permanent in the conventional sense. It exists because the river deposits sediment, and its boundaries can change as channels shift, erode and build again. People living there therefore depend on a landscape that is continually being rebuilt by the same river that threatens to remove it. During the field visit, the situation was complicated by unusually dry conditions and inadequate rainfall. Agriculture was affected, but the problem was not simply lack of land. Water had to be lifted for irrigation, and many households could not afford the pumps required to do so. The island also lacked a reliable energy source. Geobags have been used in places to slow erosion, but residents described them as temporary protection, with some reporting that they remain effective for roughly three years. The chapori therefore shows the other side of river vulnerability: too much water can destroy crops and land, but too little water can make cultivation equally difficult.
+
+---
+
+## 8. Balabheta
+*When the river begins to take the land*
+
+**Coordinates**: 26.495° N, 90.934° E (`lat: 26.495`, `lon: 90.934`)
+
+**Media Image**: `assets/images/poi_8.jpg`
+
+At Balibheta, the river becomes a more immediate physical threat. The village, close to the Beki bridge, has experienced severe bank erosion, and the field team returned to the area to understand how residents were responding to the continuing changes. Here erosion is not an abstract measurement of bank retreat. It determines how long a house can remain where it is, whether agricultural land can be cultivated again, and whether families can continue to invest in a place whose boundary may change after the next flood. Local discussions also showed that communities are not simply waiting for government intervention. People have developed their own ways of dealing with changing river conditions, although local structures such as bamboo porcupines have generally been considered inadequate against the present strength of the Beki. The repeated need to adapt to a moving river gradually turns a physical hazard into a livelihood problem.
+
+---
+
+## 9. Suwapur
+*When erosion becomes displacement*
+
+**Coordinates**: 26.3291° N, 91.0103° E (`lat: 26.3291`, `lon: 91.0103`)
+
+**Media Image**: `assets/images/poi_9.jpg`
+
+At Suwapur, near the Jania bridge, the consequences of erosion become more clearly social. Residents described the loss of land and the displacement of families as the river changed its course. Once land disappears, the loss is not limited to the physical plot. Agricultural production is affected, houses have to be rebuilt, social networks may be disrupted, and families have to decide where they can afford to move. The field interactions showed how shifting river boundaries create a continuing uncertainty: a family may rebuild after one erosion event only to face the same risk again. This is different from a flood that arrives, recedes and leaves the landscape broadly intact. Erosion gradually removes the place itself. In Suwapur, the river is therefore experienced not only as moving water but as a process of losing land over time.
+
+---
+
+## 10. Kalgachia Circle
+*Where the transformation becomes visible*
+
+**Coordinates**: 26.35° N, 90.89° E (`lat: 26.35`, `lon: 90.89`)
+
+**Media Image**: `assets/images/poi_10.jpg`
+
+The downstream journey comes together in Kalgachia Circle, where Kalgachia and Kharbali Gaon can be understood as part of the same broader erosion landscape. Kalgachia has experienced repeated widening and shifting of the Beki, with residents describing the loss of houses and agricultural land and the movement of families away from areas that could no longer support them. At Kharbali Gaon, severe erosion was also evident, with little visible government infrastructure at the field location to provide immediate protection. The contrast with places such as Gobardhana is important. Upstream sections of the Beki have received embankments and other forms of protection, while downstream stretches remain exposed. The field report describes this as a redistribution of pressure: protection in one stretch does not necessarily remove the river’s energy from the system. Where the bank is unprotected, erosion can continue. Kalgachia Circle therefore brings together the physical and social consequences of the changes that began much farther upstream—channel migration, loss of land, repeated displacement and increasing difficulty in maintaining a stable livelihood beside the river.
+
+---
+

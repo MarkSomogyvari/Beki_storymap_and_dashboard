@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beki River Catchment StoryMap & Dashboard</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- App Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="app-container">
+    
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="brand-title">
+          <h1>Beki River Catchment StoryMap</h1>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <!-- POI Quick Jump Dropdown -->
+        <div class="poi-select-wrapper">
+          <select id="poi-select" aria-label="Jump to Point of Interest">
+            <option value="">Loading locations...</option>
+          </select>
+        </div>
+
+        <!-- Basemap Switcher Buttons -->
+        <button class="btn-control active" data-basemap="topo" title="Topographic Map">
+          ⛰️ Topo
+        </button>
+        <button class="btn-control" data-basemap="esri" title="Esri High-Res Satellite">
+          🛰️ Satellite
+        </button>
+        <button class="btn-control" data-basemap="osm" title="OpenStreetMap Standard">
+          🗺️ OpenStreetMap
+        </button>
+
+        <!-- Catchment Dashboard Toggle -->
+        <button id="toggle-dashboard-btn" class="btn-control" title="Toggle Dashboard Layer Overlays">
+          📊 Catchment Dashboard
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area (Split Screen: Narrative Panel + Interactive Map) -->
+    <main class="main-content">
+      
+      <!-- Left Scrollable Narrative Panel -->
+      <section id="narrative-panel" class="narrative-panel" aria-label="Story Map Narrative">
+        
+        <!-- Story Intro Card -->
+        <div class="story-intro-card">
+          <h2>Following the River: From Kurichhu to Manas–Beki</h2>
+          <p>
+            Explore the 10 field observation points along the transboundary river system. Scroll down to travel continuously down the catchment, or click map markers to explore specific locations.
+          </p>
+        </div>
+
+        <!-- Dynamic Container for Story Cards -->
+        <div id="story-cards-container">
+          <!-- Story cards injected dynamically by app.js -->
+        </div>
+      </section>
+
+      <!-- Right Interactive Map Panel -->
+      <section class="map-panel" aria-label="Interactive Map">
+        <div id="map"></div>
+
+        <!-- Floating Dashboard & Layer Drawer -->
+        <aside id="dashboard-drawer" class="dashboard-drawer hidden" aria-label="Dashboard Overlays">
+          <div class="drawer-header">
+            <h3>Hydrological Dashboard</h3>
+          </div>
+
+          <!-- Map Layers Selection -->
+          <div class="layer-group">
+            <label class="group-title">Map Layers</label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="chk-river-path" checked>
+              <span>Beki Main Flow Path</span>
+            </label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="chk-flood-overlays" checked>
+              <span>Historical Flood Inundation</span>
+            </label>
+          </div>
+
+          <!-- Timeline Slider for Flood Extents -->
+          <div class="layer-group">
+            <label class="group-title">Historical Timeline</label>
+            <div class="timeline-control-wrapper">
+              <div class="timeline-header">
+                <span>Flood Extent Year:</span>
+                <span id="timeline-year-display">All Years</span>
+              </div>
+              <input type="range" id="timeline-slider" class="timeline-slider" min="0" max="2023" step="1" value="0" list="timeline-years">
+              <datalist id="timeline-years">
+                <option value="0" label="All"></option>
+                <option value="2004" label="2004"></option>
+                <option value="2007" label="2007"></option>
+                <option value="2014" label="2014"></option>
+                <option value="2023" label="2023"></option>
+              </datalist>
+              <div class="timeline-ticks">
+                <span>All</span>
+                <span>2004</span>
+                <span>2007</span>
+                <span>2014</span>
+                <span>2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Legend -->
+          <div class="map-legend">
+            <label class="group-title" style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:0.4rem;">Legend</label>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #e63946;"></div>
+              <span>2004 Landslide Outburst Flood</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #f4a261;"></div>
+              <span>2007 Channel Migration Shift</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #2a9d8f;"></div>
+              <span>2014 Monsoon Flood</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #457b9d;"></div>
+              <span>2023 Chapori Bank Erosion</span>
+            </div>
+          </div>
+        </aside>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- App Custom Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>

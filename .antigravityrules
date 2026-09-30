@@ -1,0 +1,2 @@
+ENV: Windows.
+Always use 'cmd /c' for all shell/terminal executions to ensure the process terminates immediately and sends an EOF signal. Avoid long-running background task runners for simple inspects or listings.
