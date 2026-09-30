@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let markers = {};
   let riverPathLayer = null;
   let floodOverlaysLayer = null;
+  let politicalMapLayer = null;
   let currentActiveId = null;
 
   // Basemap Tile Layers (Open data tiles)
@@ -83,6 +84,13 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         `);
       }
+    });
+
+    // Initialize Political Map GeoTIFF Layer Overlay (Off by default)
+    const politicalMapBounds = [[25.942706, 89.866644], [28.889546, 92.661001]];
+    politicalMapLayer = L.imageOverlay('assets/layers/political_map.jpg', politicalMapBounds, {
+      opacity: 0.75,
+      interactive: false
     });
 
     // Populate POI Dropdown Select
@@ -278,6 +286,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         map.removeLayer(floodOverlaysLayer);
       }
     });
+
+    const politicalToggle = document.getElementById('chk-political-map');
+    if (politicalToggle) {
+      politicalToggle.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          politicalMapLayer.addTo(map);
+        } else {
+          map.removeLayer(politicalMapLayer);
+        }
+      });
+    }
 
     // Timeline Slider
     const timelineSlider = document.getElementById('timeline-slider');
