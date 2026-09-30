@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         `);
       }
-    }).addTo(map);
+    });
 
     // Populate POI Dropdown Select
     populatePoiDropdown(storyData.pois);
