@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beki River Catchment StoryMap & Dashboard</title>
+  <title>Beki River Story Map</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,12 +19,12 @@
 <body>
 
   <div id="app-container">
-    
+
     <!-- Top Navigation Header -->
     <header class="app-header">
       <div class="header-brand">
         <div class="brand-title">
-          <h1>Beki River Catchment StoryMap</h1>
+          <h1>Beki River Story Map</h1>
         </div>
       </div>
 
@@ -38,7 +38,7 @@
 
         <!-- Basemap Switcher Buttons -->
         <button class="btn-control active" data-basemap="topo" title="Topographic Map">
-          ⛰️ Topo
+          ⛰️ Topography
         </button>
         <button class="btn-control" data-basemap="esri" title="Esri High-Res Satellite">
           🛰️ Satellite
@@ -49,22 +49,22 @@
 
         <!-- Catchment Dashboard Toggle -->
         <button id="toggle-dashboard-btn" class="btn-control" title="Toggle Dashboard Layer Overlays">
-          📊 Catchment Dashboard
+          📊 Flood Dashboard
         </button>
       </div>
     </header>
 
     <!-- Main Content Area (Split Screen: Narrative Panel + Interactive Map) -->
     <main class="main-content">
-      
+
       <!-- Left Scrollable Narrative Panel -->
       <section id="narrative-panel" class="narrative-panel" aria-label="Story Map Narrative">
-        
+
         <!-- Story Intro Card -->
         <div class="story-intro-card">
           <h2>Following the River: From Kurichhu to Manas–Beki</h2>
           <p>
-            Explore the 10 field observation points along the transboundary river system. Scroll down to travel continuously down the catchment, or click map markers to explore specific locations.
+            Explore along the transboundary Beki river system. Scroll down to travel continuously down the catchment, or click map markers to explore specific locations.
           </p>
         </div>
 
@@ -88,11 +88,11 @@
           <div class="layer-group">
             <label class="group-title">Map Layers</label>
             <label class="layer-checkbox">
-              <input type="checkbox" id="chk-river-path" checked>
+              <input type="checkbox" id="chk-river-path" unchecked>
               <span>Beki Main Flow Path</span>
             </label>
             <label class="layer-checkbox">
-              <input type="checkbox" id="chk-flood-overlays" checked>
+              <input type="checkbox" id="chk-flood-overlays" unchecked>
               <span>Historical Flood Inundation</span>
             </label>
           </div>
