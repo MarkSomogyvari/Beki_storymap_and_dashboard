@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 3. Render Story Cards and Map Markers
     renderStoryCards(storyData.pois);
     renderMapMarkers(storyData.pois);
-    
+
     // Add River Path GeoJSON
     riverPathLayer = L.geoJSON(riverGeojson, {
       style: {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         opacity: 0.8,
         dashArray: '6, 6'
       }
-    }).addTo(map);
+    });
 
     // Add Flood Overlays GeoJSON
     floodOverlaysLayer = L.geoJSON(floodGeojson, {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function setupScrollObserver() {
     const cards = document.querySelectorAll('.story-card');
-    
+
     const observerOptions = {
       root: document.getElementById('narrative-panel'),
       rootMargin: '-20% 0px -40% 0px',
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Dashboard Drawer Toggle Button
     const dashboardToggleBtn = document.getElementById('toggle-dashboard-btn');
     const dashboardDrawer = document.getElementById('dashboard-drawer');
-    
+
     dashboardToggleBtn.addEventListener('click', () => {
       dashboardDrawer.classList.toggle('hidden');
       dashboardToggleBtn.classList.toggle('active');
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (floodOverlaysLayer) {
         map.removeLayer(floodOverlaysLayer);
 
-        const filteredFeatures = selectedYear === '0' 
+        const filteredFeatures = selectedYear === '0'
           ? floodGeojson.features
           : floodGeojson.features.filter(f => f.properties.year.toString() === selectedYear);
 
