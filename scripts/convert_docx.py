@@ -170,11 +170,11 @@ def parse_docx_story(docx_path):
     # Specific adjustment for Mathanguri paragraph combined text:
     pois_raw[2]["text"] = paragraphs[10] + "\n\n" + paragraphs[11]
 
-    # Add default image placeholders
+    # Add image paths (matching uploaded 1.jpg..10.jpg files)
     for item in pois_raw:
         item["media"] = {
             "type": "image",
-            "url": f"assets/images/poi_{item['id']}.jpg",
+            "url": f"assets/images/{item['id']}.jpg",
             "caption": f"Field observation at {item['title']}",
             "alt": item["title"]
         }

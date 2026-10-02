@@ -124,8 +124,11 @@ document.addEventListener('DOMContentLoaded', async () => {
           <span>${poi.lat_str} | ${poi.lon_str}</span>
         </div>
         <div class="card-media-wrapper">
-          <div class="media-placeholder-icon">📷</div>
-          <div class="media-placeholder-text">Field Media Slot: ${poi.media.alt}</div>
+          <img src="${poi.media.url}" alt="${poi.media.alt}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="media-fallback" style="display:none; flex-direction:column; align-items:center; justify-content:center;">
+            <div class="media-placeholder-icon">📷</div>
+            <div class="media-placeholder-text">${poi.media.alt}</div>
+          </div>
           <div class="media-caption">${poi.media.caption}</div>
         </div>
         <div class="card-narrative">${poi.text}</div>
@@ -281,6 +284,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (activeLayer) {
           if (e.target.checked) {
             activeLayer.addTo(map);
+            // Zoom/fit map to the area where the GeoTIFF simulations are rendered
+            map.fitBounds(simulationBounds, { padding: [30, 30], animate: true, duration: 1.2 });
           } else {
             map.removeLayer(activeLayer);
           }

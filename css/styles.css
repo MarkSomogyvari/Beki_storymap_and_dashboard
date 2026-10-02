@@ -295,10 +295,17 @@ html, body {
 }
 
 .media-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0) 100%);
+  padding: 0.75rem 0.85rem 0.5rem 0.85rem;
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: #e2e8f0;
   font-style: italic;
-  margin-top: 0.5rem;
+  z-index: 2;
+  text-align: left;
 }
 
 .card-narrative {
